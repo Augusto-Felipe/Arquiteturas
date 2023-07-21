@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="1036" y="-101"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="FGa-5f-kdQ">
             <objects>
-                <viewController id="ffi-Vt-e5y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="ffi-Vt-e5y" customClass="HomeViewController" customModule="Arquiteturas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NwW-Qn-eOL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
