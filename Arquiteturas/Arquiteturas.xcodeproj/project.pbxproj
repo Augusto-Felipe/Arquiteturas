@@ -16,6 +16,11 @@
 		5068476B2A6B18AB003AA93C /* UiColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068476A2A6B18AB003AA93C /* UiColor+.swift */; };
 		506847702A6B1FD5003AA93C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068476F2A6B1FD5003AA93C /* LoginScreen.swift */; };
 		506847722A6B25FA003AA93C /* UITextfield+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506847712A6B25FA003AA93C /* UITextfield+.swift */; };
+		506847752A6B2ADD003AA93C /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506847742A6B2ADD003AA93C /* RegisterCoordinator.swift */; };
+		506847782A6B2BA7003AA93C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506847772A6B2BA7003AA93C /* RegisterViewController.swift */; };
+		5068477B2A6B2BD5003AA93C /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068477A2A6B2BD5003AA93C /* RegisterScreen.swift */; };
+		5068477D2A6B2FF1003AA93C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068477C2A6B2FF1003AA93C /* HomeCoordinator.swift */; };
+		506847802A6B572F003AA93C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068477F2A6B572F003AA93C /* UserViewModel.swift */; };
 		50B261232A65CC0000F89BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B261222A65CC0000F89BF4 /* AppDelegate.swift */; };
 		50B261252A65CC0000F89BF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B261242A65CC0000F89BF4 /* SceneDelegate.swift */; };
 		50B2612C2A65CC0100F89BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B2612B2A65CC0100F89BF4 /* Assets.xcassets */; };
@@ -50,6 +55,11 @@
 		5068476A2A6B18AB003AA93C /* UiColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiColor+.swift"; sourceTree = "<group>"; };
 		5068476F2A6B1FD5003AA93C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		506847712A6B25FA003AA93C /* UITextfield+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+.swift"; sourceTree = "<group>"; };
+		506847742A6B2ADD003AA93C /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		506847772A6B2BA7003AA93C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5068477A2A6B2BD5003AA93C /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		5068477C2A6B2FF1003AA93C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		5068477F2A6B572F003AA93C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		50B2611F2A65CC0000F89BF4 /* Arquiteturas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arquiteturas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B261222A65CC0000F89BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50B261242A65CC0000F89BF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +104,8 @@
 			children = (
 				506847662A6B1610003AA93C /* Coordinator.swift */,
 				506847682A6B17E8003AA93C /* LoginCoordinator.swift */,
+				506847742A6B2ADD003AA93C /* RegisterCoordinator.swift */,
+				5068477C2A6B2FF1003AA93C /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -101,8 +113,8 @@
 		5068476C2A6B198B003AA93C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				506847762A6B2B63003AA93C /* Register */,
 				5068476D2A6B19A6003AA93C /* Login */,
-				506847632A6B157F003AA93C /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +122,7 @@
 		5068476D2A6B19A6003AA93C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				506847632A6B157F003AA93C /* LoginViewController.swift */,
 				5068476E2A6B1FC2003AA93C /* Screen */,
 			);
 			path = Login;
@@ -121,6 +134,31 @@
 				5068476F2A6B1FD5003AA93C /* LoginScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		506847762A6B2B63003AA93C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				506847792A6B2BBB003AA93C /* Screen */,
+				506847772A6B2BA7003AA93C /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		506847792A6B2BBB003AA93C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5068477A2A6B2BD5003AA93C /* RegisterScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		5068477E2A6B5706003AA93C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5068477F2A6B572F003AA93C /* UserViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		50B261162A65CC0000F89BF4 = {
@@ -146,6 +184,7 @@
 		50B261212A65CC0000F89BF4 /* Arquiteturas */ = {
 			isa = PBXGroup;
 			children = (
+				5068477E2A6B5706003AA93C /* ViewModel */,
 				50B261652A65DD6700F89BF4 /* Infrastructure */,
 				506847652A6B15F6003AA93C /* Coordinator */,
 				50B261622A65DA1800F89BF4 /* Model */,
@@ -411,8 +450,13 @@
 				50B261232A65CC0000F89BF4 /* AppDelegate.swift in Sources */,
 				50B261252A65CC0000F89BF4 /* SceneDelegate.swift in Sources */,
 				5068476B2A6B18AB003AA93C /* UiColor+.swift in Sources */,
+				5068477D2A6B2FF1003AA93C /* HomeCoordinator.swift in Sources */,
+				506847752A6B2ADD003AA93C /* RegisterCoordinator.swift in Sources */,
+				5068477B2A6B2BD5003AA93C /* RegisterScreen.swift in Sources */,
 				506847692A6B17E8003AA93C /* LoginCoordinator.swift in Sources */,
+				506847802A6B572F003AA93C /* UserViewModel.swift in Sources */,
 				50B261642A65DA3100F89BF4 /* User.swift in Sources */,
+				506847782A6B2BA7003AA93C /* RegisterViewController.swift in Sources */,
 				506847722A6B25FA003AA93C /* UITextfield+.swift in Sources */,
 				506847702A6B1FD5003AA93C /* LoginScreen.swift in Sources */,
 				50B261612A65D9AF00F89BF4 /* UserProvider.swift in Sources */,

@@ -9,8 +9,11 @@ import UIKit
 
 class LoginScreen: UIView {
     
-    //MARK: - Properties
+    //MARK: - Closures
+    var onRegisterTapped:(() -> Void)?
+    var onLoginTapped:((_ email: String, _ password: String) -> Void)?
     
+    //MARK: - Properties
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -66,10 +69,11 @@ class LoginScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Entrar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .white
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemBlue
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -78,12 +82,26 @@ class LoginScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Registrar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .white
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemBlue
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    //MARK: - Actions
+    @objc func loginButtonTapped() {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            self.onLoginTapped?(email, password)
+        } else {
+            //Campos tem que ser preenchidos corretamente
+        }
+    }
+
+    @objc func registerButtonTapped() {
+        self.onRegisterTapped?()
+    }
     
     //MARK: - Initializers
     override init(frame: CGRect) {
