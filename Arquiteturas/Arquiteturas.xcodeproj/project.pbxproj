@@ -21,6 +21,8 @@
 		5068477B2A6B2BD5003AA93C /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068477A2A6B2BD5003AA93C /* RegisterScreen.swift */; };
 		5068477D2A6B2FF1003AA93C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068477C2A6B2FF1003AA93C /* HomeCoordinator.swift */; };
 		506847802A6B572F003AA93C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068477F2A6B572F003AA93C /* UserViewModel.swift */; };
+		506847842A6B5B85003AA93C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506847832A6B5B85003AA93C /* HomeViewController.swift */; };
+		506847862A6B5B9A003AA93C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506847852A6B5B9A003AA93C /* HomeScreen.swift */; };
 		50B261232A65CC0000F89BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B261222A65CC0000F89BF4 /* AppDelegate.swift */; };
 		50B261252A65CC0000F89BF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B261242A65CC0000F89BF4 /* SceneDelegate.swift */; };
 		50B2612C2A65CC0100F89BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B2612B2A65CC0100F89BF4 /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		5068477A2A6B2BD5003AA93C /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		5068477C2A6B2FF1003AA93C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		5068477F2A6B572F003AA93C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		506847832A6B5B85003AA93C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		506847852A6B5B9A003AA93C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		50B2611F2A65CC0000F89BF4 /* Arquiteturas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arquiteturas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B261222A65CC0000F89BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50B261242A65CC0000F89BF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		5068476C2A6B198B003AA93C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				506847812A6B5B65003AA93C /* Home */,
 				506847762A6B2B63003AA93C /* Register */,
 				5068476D2A6B19A6003AA93C /* Login */,
 			);
@@ -159,6 +164,23 @@
 				5068477F2A6B572F003AA93C /* UserViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		506847812A6B5B65003AA93C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				506847822A6B5B6E003AA93C /* Screen */,
+				506847832A6B5B85003AA93C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		506847822A6B5B6E003AA93C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				506847852A6B5B9A003AA93C /* HomeScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		50B261162A65CC0000F89BF4 = {
@@ -449,6 +471,7 @@
 			files = (
 				50B261232A65CC0000F89BF4 /* AppDelegate.swift in Sources */,
 				50B261252A65CC0000F89BF4 /* SceneDelegate.swift in Sources */,
+				506847842A6B5B85003AA93C /* HomeViewController.swift in Sources */,
 				5068476B2A6B18AB003AA93C /* UiColor+.swift in Sources */,
 				5068477D2A6B2FF1003AA93C /* HomeCoordinator.swift in Sources */,
 				506847752A6B2ADD003AA93C /* RegisterCoordinator.swift in Sources */,
@@ -462,6 +485,7 @@
 				50B261612A65D9AF00F89BF4 /* UserProvider.swift in Sources */,
 				50B261672A65DD8100F89BF4 /* Constants.swift in Sources */,
 				504CAF922A6740A700051175 /* UserManager.swift in Sources */,
+				506847862A6B5B9A003AA93C /* HomeScreen.swift in Sources */,
 				506847642A6B157F003AA93C /* LoginViewController.swift in Sources */,
 				504CAF902A673D1200051175 /* UserBusiness.swift in Sources */,
 				506847672A6B1610003AA93C /* Coordinator.swift in Sources */,
