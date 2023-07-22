@@ -15,17 +15,13 @@ class HomeViewController: UIViewController {
         return screen
     }()
     
-    
     override func loadView() {
         screen = HomeScreen()
         self.view = screen
     }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
 }

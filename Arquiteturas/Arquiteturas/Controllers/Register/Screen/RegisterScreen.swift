@@ -8,12 +8,188 @@
 import UIKit
 
 class RegisterScreen: UIView {
+    
+    //MARK: - Closures
+    var onRegisterTapped:((_ email: String, _ password: String) -> Void)?
+    var onLoginTapped:(() -> Void)?
+    
+    //MARK: - Properties
+    lazy var registerLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Registrar"
+        label.textColor = .lightGray
+        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    lazy var emailLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Email"
+        label.textColor = .lightGray
+        label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        return label
+    }()
+    
+    lazy var emailTextField: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.placeholder = "Digite seu email"
+        tf.autocorrectionType = .no
+        tf.borderStyle = .roundedRect
+        tf.keyboardType = .emailAddress
+        tf.setLeftPaddingPoints(5)
+        return tf
+    }()
+    
+    lazy var passwordLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Senha"
+        label.textColor = .lightGray
+        label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        return label
+    }()
+    
+    lazy var passwordTextField: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.placeholder = "Digite sua senha"
+        tf.autocorrectionType = .no
+        tf.borderStyle = .roundedRect
+        tf.keyboardType = .emailAddress
+        tf.setLeftPaddingPoints(5)
+        return tf
+    }()
+    
+    lazy var confirmPasswordLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Confirme sua senha"
+        label.textColor = .lightGray
+        label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        return label
+    }()
+    
+    lazy var confirmPasswordTextField: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.placeholder = "Confirme sua senha"
+        tf.autocorrectionType = .no
+        tf.borderStyle = .roundedRect
+        tf.keyboardType = .emailAddress
+        tf.setLeftPaddingPoints(5)
+        return tf
+    }()
+    
+    lazy var loginButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Entrar", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemBlue
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var registerButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Registrar", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemBlue
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    // MARK: - Actions
+    @objc func loginButtonTapped() {
+        self.onLoginTapped?()
+    }
+    
+    @objc func registerButtonTapped() {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            self.onRegisterTapped?(email, password)
+        } else {
+            
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .systemIndigo
+        addElements()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Config Elements
+    private func addElements() {
+        addSubview(registerLabel)
+        addSubview(emailLabel)
+        addSubview(emailTextField)
+        addSubview(passwordLabel)
+        addSubview(passwordTextField)
+        addSubview(confirmPasswordLabel)
+        addSubview(confirmPasswordTextField)
+        addSubview(loginButton)
+        addSubview(registerButton)
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            
+            registerLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
+            registerLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            registerLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            
+            emailLabel.topAnchor.constraint(equalTo: registerLabel.bottomAnchor, constant: 30),
+            emailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            emailLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+            
+            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 10),
+            emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+            emailTextField.heightAnchor.constraint(equalToConstant: 40),
+            
+            passwordLabel.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 10),
+            passwordLabel.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
+            passwordLabel.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
+            
+            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 10),
+            passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            
+            confirmPasswordLabel.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 10),
+            confirmPasswordLabel.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
+            confirmPasswordLabel.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
+            
+            confirmPasswordTextField.topAnchor.constraint(equalTo: confirmPasswordLabel.bottomAnchor, constant: 10),
+            confirmPasswordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            confirmPasswordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            confirmPasswordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            
+            loginButton.topAnchor.constraint(equalTo: confirmPasswordTextField.bottomAnchor, constant: 30),
+            loginButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            
+            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
+            registerButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            registerButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+        ])
     }
 }

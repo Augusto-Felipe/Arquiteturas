@@ -30,4 +30,13 @@ class UserViewModel {
             completion(.failure(error))
         }
     }
+    
+    public func setUserFromApi (_ email: String, _ password: String, completion: @escaping(Result<UserViewModel, Error>) -> Void) {
+        let manager = UserManager(business: UserBusiness())
+        manager.register(email: email, password: password) { user in
+            completion(.success(UserViewModel(model: user)))
+        } failureHandler: { error in
+            completion(.failure(error))
+        }
+    }
 }

@@ -20,5 +20,4 @@ class HomeCoordinator: CoordinatorProtocol {
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
 }

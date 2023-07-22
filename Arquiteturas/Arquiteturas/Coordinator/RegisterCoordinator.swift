@@ -13,6 +13,16 @@ class RegisterCoordinator: CoordinatorProtocol {
     
     func start() {
         let viewController = RegisterViewController()
+        
+        viewController.login = {
+            self.navigationController.popToRootViewController(animated: true)
+        }
+        
+        viewController.registerSuccess = {
+            let coordinator = HomeCoordinator(navigationController: self.navigationController)
+            coordinator.start()
+        }
+        
         self.navigationController.pushViewController(viewController, animated: true)
     }
     
