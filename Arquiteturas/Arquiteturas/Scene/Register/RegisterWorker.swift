@@ -14,7 +14,14 @@ import UIKit
 
 class RegisterWorker
 {
-  func doSomeWork()
+    func register(user: User, successHandler: @escaping(User?) -> Void, failureHandler: @escaping(Error?) -> Void)
   {
+      let manager = UserManager(business: UserBusiness())
+      manager.register(email: user.email, password: user.password) { user in
+          successHandler(user)
+      } failureHandler: { error in
+          failureHandler(error)
+      }
+      
   }
 }

@@ -32,8 +32,7 @@ class LoginPresenter: LoginPresentationLogic
     }
     
     func presentError(error: Login.Something.ViewError) {
-        let viewError = Login.Something.ViewError(error: error as! Error)
+        let viewError = Login.Something.ViewError(error: error)
         viewController?.displayError(error: viewError)
     }
-    
 }

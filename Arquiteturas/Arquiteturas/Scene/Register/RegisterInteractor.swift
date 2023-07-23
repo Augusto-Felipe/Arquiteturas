@@ -14,28 +14,37 @@ import UIKit
 
 protocol RegisterBusinessLogic
 {
-  func doSomething(request: Register.Something.Request)
+    func doSomething(request: Register.Something.Request)
 }
 
 protocol RegisterDataStore
 {
-  //var name: String { get set }
+    //var name: String { get set }
 }
 
 class RegisterInteractor: RegisterBusinessLogic, RegisterDataStore
 {
-  var presenter: RegisterPresentationLogic?
-  var worker: RegisterWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: Register.Something.Request)
-  {
-    worker = RegisterWorker()
-    worker?.doSomeWork()
+    var presenter: RegisterPresentationLogic?
+    var worker: RegisterWorker?
+    //var name: String = ""
     
-    let response = Register.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    // MARK: Do something
+    
+    func doSomething(request: Register.Something.Request)
+    {
+        worker = RegisterWorker()
+        worker?.register(user: request.user, successHandler: {[weak self] user in
+            if let self {
+                let response = Register.Something.Response(user: user ?? User())
+                self.presenter?.presentSomething(response: response)
+            }
+        }, failureHandler: {[weak self] error in
+            if let self,
+               let error = error {
+                let viewError = Register.Something.ViewError(error: error)
+                self.presenter?.presentError(error: viewError)
+            }
+        })
+        
+    }
 }

@@ -30,7 +30,7 @@ enum Login
         {
             var user: User
         }
-        struct ViewError
+        struct ViewError: Error
         {
             var error: Error
         }

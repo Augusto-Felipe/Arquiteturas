@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol RegisterRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+  func routeToHome()
 }
 
 protocol RegisterDataPassing
@@ -29,22 +29,18 @@ class RegisterRouter: NSObject, RegisterRoutingLogic, RegisterDataPassing
   
   // MARK: Routing
   
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+    func routeToHome() {
+        let destinationVC = HomeViewController()
+        navigateToPush(source: viewController!, destination: destinationVC)
+    }
 
   // MARK: Navigation
+    
+    func navigateToPush(source: RegisterViewController, destination: UIViewController)
+    {
+        destination.modalPresentationStyle = .fullScreen
+        source.navigationController?.pushViewController(destination, animated: true)
+    }
   
   //func navigateToSomewhere(source: RegisterViewController, destination: SomewhereViewController)
   //{
