@@ -10,6 +10,20 @@
 		504CAF902A673D1200051175 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504CAF8F2A673D1200051175 /* UserBusiness.swift */; };
 		504CAF922A6740A700051175 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504CAF912A6740A700051175 /* UserManager.swift */; };
 		504CAF942A67469200051175 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 504CAF932A67469200051175 /* FirebaseAuth */; };
+		508C81FB2A6D70D4006B0A76 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C81F52A6D70D4006B0A76 /* LoginPresenter.swift */; };
+		508C81FC2A6D70D4006B0A76 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C81F62A6D70D4006B0A76 /* LoginWorker.swift */; };
+		508C81FD2A6D70D4006B0A76 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C81F72A6D70D4006B0A76 /* LoginRouter.swift */; };
+		508C81FE2A6D70D4006B0A76 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C81F82A6D70D4006B0A76 /* LoginModels.swift */; };
+		508C81FF2A6D70D4006B0A76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C81F92A6D70D4006B0A76 /* LoginViewController.swift */; };
+		508C82002A6D70D4006B0A76 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C81FA2A6D70D4006B0A76 /* LoginInteractor.swift */; };
+		508C82022A6D70EF006B0A76 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C82012A6D70EF006B0A76 /* LoginScreen.swift */; };
+		508C82042A6D727D006B0A76 /* UITextfield+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C82032A6D727D006B0A76 /* UITextfield+.swift */; };
+		508C820B2A6D8048006B0A76 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C82052A6D8048006B0A76 /* RegisterPresenter.swift */; };
+		508C820C2A6D8048006B0A76 /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C82062A6D8048006B0A76 /* RegisterWorker.swift */; };
+		508C820D2A6D8048006B0A76 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C82072A6D8048006B0A76 /* RegisterRouter.swift */; };
+		508C820E2A6D8048006B0A76 /* RegisterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C82082A6D8048006B0A76 /* RegisterModels.swift */; };
+		508C820F2A6D8048006B0A76 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C82092A6D8048006B0A76 /* RegisterViewController.swift */; };
+		508C82102A6D8048006B0A76 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C820A2A6D8048006B0A76 /* RegisterInteractor.swift */; };
 		50B261232A65CC0000F89BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B261222A65CC0000F89BF4 /* AppDelegate.swift */; };
 		50B261252A65CC0000F89BF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B261242A65CC0000F89BF4 /* SceneDelegate.swift */; };
 		50B2612C2A65CC0100F89BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B2612B2A65CC0100F89BF4 /* Assets.xcassets */; };
@@ -45,6 +59,20 @@
 		1755DE1CAEFFB5EBC0B67AE2 /* Pods-Arquiteturas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arquiteturas.debug.xcconfig"; path = "Target Support Files/Pods-Arquiteturas/Pods-Arquiteturas.debug.xcconfig"; sourceTree = "<group>"; };
 		504CAF8F2A673D1200051175 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
 		504CAF912A6740A700051175 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		508C81F52A6D70D4006B0A76 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		508C81F62A6D70D4006B0A76 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		508C81F72A6D70D4006B0A76 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		508C81F82A6D70D4006B0A76 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		508C81F92A6D70D4006B0A76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		508C81FA2A6D70D4006B0A76 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		508C82012A6D70EF006B0A76 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		508C82032A6D727D006B0A76 /* UITextfield+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+.swift"; sourceTree = "<group>"; };
+		508C82052A6D8048006B0A76 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		508C82062A6D8048006B0A76 /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
+		508C82072A6D8048006B0A76 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		508C82082A6D8048006B0A76 /* RegisterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModels.swift; sourceTree = "<group>"; };
+		508C82092A6D8048006B0A76 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		508C820A2A6D8048006B0A76 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		50B2611F2A65CC0000F89BF4 /* Arquiteturas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arquiteturas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B261222A65CC0000F89BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50B261242A65CC0000F89BF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +132,13 @@
 		507B3C952A6C6F3800FAA8D8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				508C81F52A6D70D4006B0A76 /* LoginPresenter.swift */,
+				508C81F62A6D70D4006B0A76 /* LoginWorker.swift */,
+				508C81F72A6D70D4006B0A76 /* LoginRouter.swift */,
+				508C81F82A6D70D4006B0A76 /* LoginModels.swift */,
+				508C81F92A6D70D4006B0A76 /* LoginViewController.swift */,
+				508C81FA2A6D70D4006B0A76 /* LoginInteractor.swift */,
+				508C82012A6D70EF006B0A76 /* LoginScreen.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -111,6 +146,12 @@
 		507B3C962A6C6F3E00FAA8D8 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				508C82052A6D8048006B0A76 /* RegisterPresenter.swift */,
+				508C82062A6D8048006B0A76 /* RegisterWorker.swift */,
+				508C82072A6D8048006B0A76 /* RegisterRouter.swift */,
+				508C82082A6D8048006B0A76 /* RegisterModels.swift */,
+				508C82092A6D8048006B0A76 /* RegisterViewController.swift */,
+				508C820A2A6D8048006B0A76 /* RegisterInteractor.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -228,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				50B261662A65DD8100F89BF4 /* Constants.swift */,
+				508C82032A6D727D006B0A76 /* UITextfield+.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -411,20 +453,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				508C820F2A6D8048006B0A76 /* RegisterViewController.swift in Sources */,
 				50B261232A65CC0000F89BF4 /* AppDelegate.swift in Sources */,
 				50DCE4CE2A6C74DD0007AB6D /* HomeWorker.swift in Sources */,
 				50DCE4D42A6C75E50007AB6D /* HomeScreen.swift in Sources */,
 				50B261252A65CC0000F89BF4 /* SceneDelegate.swift in Sources */,
+				508C81FF2A6D70D4006B0A76 /* LoginViewController.swift in Sources */,
 				50B261642A65DA3100F89BF4 /* User.swift in Sources */,
+				508C820C2A6D8048006B0A76 /* RegisterWorker.swift in Sources */,
 				50B261612A65D9AF00F89BF4 /* UserProvider.swift in Sources */,
+				508C81FD2A6D70D4006B0A76 /* LoginRouter.swift in Sources */,
+				508C82002A6D70D4006B0A76 /* LoginInteractor.swift in Sources */,
 				50B261672A65DD8100F89BF4 /* Constants.swift in Sources */,
 				504CAF922A6740A700051175 /* UserManager.swift in Sources */,
+				508C820E2A6D8048006B0A76 /* RegisterModels.swift in Sources */,
+				508C82042A6D727D006B0A76 /* UITextfield+.swift in Sources */,
+				508C82102A6D8048006B0A76 /* RegisterInteractor.swift in Sources */,
+				508C82022A6D70EF006B0A76 /* LoginScreen.swift in Sources */,
 				50DCE4D22A6C74DD0007AB6D /* HomeInteractor.swift in Sources */,
+				508C81FB2A6D70D4006B0A76 /* LoginPresenter.swift in Sources */,
 				504CAF902A673D1200051175 /* UserBusiness.swift in Sources */,
 				50DCE4CD2A6C74DD0007AB6D /* HomePresenter.swift in Sources */,
+				508C820B2A6D8048006B0A76 /* RegisterPresenter.swift in Sources */,
 				50DCE4CF2A6C74DD0007AB6D /* HomeRouter.swift in Sources */,
 				50DCE4D02A6C74DD0007AB6D /* HomeModels.swift in Sources */,
+				508C820D2A6D8048006B0A76 /* RegisterRouter.swift in Sources */,
+				508C81FE2A6D70D4006B0A76 /* LoginModels.swift in Sources */,
 				50DCE4D12A6C74DD0007AB6D /* HomeViewController.swift in Sources */,
+				508C81FC2A6D70D4006B0A76 /* LoginWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
